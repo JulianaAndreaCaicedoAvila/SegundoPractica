@@ -11,6 +11,19 @@
         event.preventDefault();        
         window.location.href = "VistaDocente.html";
     }
+    function ListaDocentes() {
+        event.preventDefault();        
+        window.location.href = "ListaDocentes.html";
+    }
+    function AprobacionPlan() {
+        event.preventDefault();        
+        window.location.href = "RetroalimentacionPlanDocente.html";
+    }
+
+    function VistaPlan() {
+        event.preventDefault();        
+        window.location.href = "https://docs.google.com/spreadsheets/d/1_pnJ8_-bi2E2MkkaHTXBaMVT-Bg4GJuV3YSqhMhxbhc/edit?usp=sharing" 
+    }
 </script>
 
 
@@ -37,12 +50,11 @@
             <div class="menu" style="left: 100%;">
                 <button class="menu-btn" onclick="toggleMenu()">Menú</button>
                 <ul class="menu-list" id="menuList">
-                    <li><a onclick="">Plan docente 2023/2</a></li>
-                    <li><a onclick="">Ver docentes escuelas</a></li>
-                    <li><a onclick="">Crear Plan docente</a></li>
-                    <li><a onclick="">Actualizar plan docentes</a></li>
-                    <li><a onclick="">Aprobar plan docentes</a></li>
-                    <li><a onclick="CargaDocente()">Carga docente</a></li>
+                    <li><a  onclick="VistaPlan()" >Plan docente 2023/2</a></li>
+                    <li><a onclick="ListaDocentes()">Ver docentes</a></li>
+                    <li><a onclick="CargaDocente()">Crear y actualizar plan docente</a></li>
+                    <li><a onclick="AprobacionPlan()">Aprobar plan docente</a></li>
+
                     <li><a onclick="VistaDocente()">Vista docente</a></li>
 
 
@@ -56,28 +68,26 @@
         <p>
             Proyecto de práctica aplicada
         </p>
-        <a href=" #"  class="btn-1">Consultar documentos</a>
+        <a href="Consultas.html"  class="btn-1">Consultar documentos</a>
     </div>
 </header>
     
-   
-
                     <main class="services">   <!---la etiqueta el main es lo principal de la pagina  -->
                     <div class="services-content container">
                         <h2>Añadido recientemente</h2>
                         <div class="services-group">
-
                             <div class="services-1">
-                                <img src="images/i1.svg" alt="">
-                                <h3>Archivo plan docente 2023/2</h3>
+                                <img  onclick="VistaPlan()"src="image.png" alt="logo">
+
+                                <h3 onclick="VistaPlan()">Archivo plan docente 2023/2</h3>
                             </div>
                             <div class="services-1">
-                                <img src="https://www.poli.edu.co/maratonprogramacion" alt="">
+                                <img src="image.png" alt="">
                                 <h3>Maratones de programación</h3>
                             </div>
                             
                             <div class="services-1">
-                                <img src="images/i3.svg" alt="">
+                                <img src="image.png" alt="">
                                 <h3>Video tutorial Funcionamiento plataforma</h3>
                             </div>
                         

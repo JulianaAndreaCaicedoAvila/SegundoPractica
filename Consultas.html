@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retroalimentación plan</title>
+    <title>Consultas</title>
     <link rel="stylesheet" href="Estilos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 </head>
@@ -25,10 +25,25 @@
                 <li class="nav-item active">
                   <a class="nav-link" onclick="InicioMensaje()">Home <span class="sr-only">(current)</span></a>
                 </li>
-             
                 <li class="nav-item">
-                    <a class="nav-link" onclick="toggleMenu('menuList')">Escuelas</a>
-                    <ul class="menu-list" id="menuList" style="background-color: rgb(255, 255, 255);">
+                    <a class="nav-link" onclick="toggleMenu('menuFormato')">Etiquetas de formato</a>
+                    <ul class="menu-list" id="menuFormato" style="background-color: rgb(255, 255, 255);">
+                        <li><a onclick="">PDF</a></li>
+                        <li><a onclick="">WORD</a></li>
+                        <li><a onclick="">Excel</a></li>
+                      </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="toggleMenu('menuEtiquetas')">Etiquetas </a>
+                    <ul class="menu-list" id="menuEtiquetas" style="background-color: rgb(255, 255, 255);">
+                        <li><a onclick="">Fecha</a></li>
+                        <li><a onclick="">Proyectos</a></li>
+                        <li><a onclick="">Actividad extracurricular</a></li>
+                      </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="toggleMenu('menuEscuelas')">Escuelas</a>
+                    <ul class="menu-list" id="menuEscuelas" style="background-color: rgb(255, 255, 255);">
                         <li><a onclick="">FNGS</a></li>
                         <li><a onclick="">FSCC</a></li>
                         <li><a onclick="">FIDI</a></li>
@@ -42,8 +57,6 @@
             </div>
           </nav>
     </div>
-
-
     <div id="CargaDocente"style="margin-top: 1%;">
         <div class="tabla-container">
             <table>
@@ -84,12 +97,14 @@
     </div>
 </body>
 </html>
-
-
 <script>
-    function toggleMenu() {
-        var menuList = document.getElementById("menuList");
-        menuList.style.display = menuList.style.display === "block" ? "none" : "block";
+    function toggleMenu(menuId) {
+        var allMenus = document.querySelectorAll('.menu-list');
+        allMenus.forEach(function(menu) {
+            menu.style.display = 'none';
+        });
+        var menuList = document.getElementById(menuId);
+        menuList.style.display = 'block';
     }
     function confirmar() {
         const confirmacion = window.confirm('Vas a confirmar el plan docente creado ¿Estás seguro de guardarlo?');
@@ -105,10 +120,11 @@
             window.location.href = "Home_DirEscuela.html";
         }
     }
-    function AprobacionPlanes() {
+    function subirDocumento() {
+        const confirmacion = window.confirm('Vas a ir a la opción de subir documentos¿Estás seguro ?');
+        if (confirmacion) {
             event.preventDefault();        
-            window.location.href = "AprobacionPlanes.html";
+            window.location.href = "CargaDocenteArchivoEtiquetas.html";
         }
-    
-   
+    }
 </script>

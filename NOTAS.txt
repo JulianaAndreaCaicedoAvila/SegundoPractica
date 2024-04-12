@@ -1,23 +1,9 @@
-// Hacer una solicitud HTTP para obtener los datos del servidor
-fetch('url_del_endpoint_para_obtener_datos')
-  .then(response => response.json()) // Convertir la respuesta a JSON
-  .then(data => {
-    // Limpiar la tabla
-    const tbody = document.getElementById('tabla-body');
-    tbody.innerHTML = '';
+Poner qué es cada cosa.
 
-    // Agregar cada fila de datos a la tabla
-    data.forEach(fila => {
-      const tr = document.createElement('tr');
-      tr.innerHTML = `
-        <td>${fila.espacioCodigo}</td>
-        <td>${fila.espacioFuncion}</td>
-        <td>${fila.espacioAccionPrincipal}</td>
-        <td>${fila.espacioEntregable}</td>
-      `;
-      tbody.appendChild(tr);
-    });
-  })
-  .catch(error => {
-    console.error('Error al obtener los datos:', error);
-  });
+-preventDefault: Qué es?poner qué hace
+
+-getElementById: Es para referencias un elemento por el ID
+
+-window.location.href: Es para cambiar de vista en HTML.
+
+-onclick: Es para llamar a las funciones de JS

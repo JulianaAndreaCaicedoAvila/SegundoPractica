@@ -88,13 +88,11 @@ body {
 
 
 .menu {
-    
     position: relative;
     display: inline-block;
 }
 .menu-btn {
     font-size: 25px;
-
     padding: 20px 40px;
     background-color: #030047;
     color: #d8d9e6;
@@ -190,7 +188,7 @@ body{
 
 }
 .menu .navbar ul li a:hover {
-    color: #5e05ed;
+    color:  #030047;
 
 }
 
@@ -229,7 +227,7 @@ body{
 .btn-1 {
     display: inline-block;  /*es para aplicar bienn el padding y el margin de otra forma no seaplicaria bien*/
     padding:  10px 35px;
-    background-color: #8108fa;
+    background-color:  #030047;
     border-radius: 19px;
     color: #f9fafc;
     text-transform: uppercase;
@@ -279,11 +277,10 @@ body{
 
 }
 .btn-2 {
-    display: inline-block;  /*es para aplicar bienn el padding y el margin de otra forma no seaplicaria bien*/
-    align-items: center;
+    display: inline-block;  
     margin-bottom: 15px;
     padding:  10px 35px;
-    background-color: #8b00f5;
+    background-color: #030047;
     color: #ffffff;
     text-transform: uppercase;
 
@@ -306,7 +303,7 @@ body{
     background-size: cover;
     background-attachment: fixed;
     padding: 100px 0;
-    color: #6d0dc1;
+    color:  #030047;
 }
 
 .services-content {
@@ -340,7 +337,7 @@ body{
 }
 .services-1 h3 {
     font-size: 18px; 
-    color:#6d0dc1;
+    color: white;
 }
 
 h2 {
