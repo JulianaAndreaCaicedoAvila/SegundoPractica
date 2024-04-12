@@ -1,0 +1,145 @@
+<script>
+    function toggleMenu() {
+        var menuList = document.getElementById("menuList");
+        menuList.style.display = menuList.style.display === "block" ? "none" : "block";
+    }
+    function CargaDocente() {
+        event.preventDefault();        
+        window.location.href = "CargaDocente.html";
+    }
+    function VistaDocente() {
+        event.preventDefault();        
+        window.location.href = "VistaDocente.html";
+    }
+</script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="Estilos.css">
+    <title>Home</title>
+</head>
+<body>
+    <header class="header">
+        
+       <div class="menu  container">
+        <img src="image.png" class="menu-icono" alt="Logo">,
+        <input type = "checkbox"  id="menu"/>
+        <label for="menu">
+            <img src="FondoPoliNocturno.jpg" class="menu-icono" alt="">,
+        </label>
+    <nav class="navbar">
+        <ul>
+            <div class="menu" style="left: 100%;">
+                <button class="menu-btn" onclick="toggleMenu()">Menú</button>
+                <ul class="menu-list" id="menuList">
+                    <li><a onclick="">Plan docente 2023/2</a></li>
+                    <li><a onclick="">Ver docentes escuelas</a></li>
+                    <li><a onclick="">Crear Plan docente</a></li>
+                    <li><a onclick="">Actualizar plan docentes</a></li>
+                    <li><a onclick="">Aprobar plan docentes</a></li>
+                    <li><a onclick="CargaDocente()">Carga docente</a></li>
+                    <li><a onclick="VistaDocente()">Vista docente</a></li>
+
+
+                  </ul>
+                </div>
+        </ul>   
+    </nav>
+    </div>
+    <div class="header-content  container">
+        <h1> Repositorio Digital Poli</h1>
+        <p>
+            Proyecto de práctica aplicada
+        </p>
+        <a href=" #"  class="btn-1">Consultar documentos</a>
+    </div>
+</header>
+    
+   
+
+                    <main class="services">   <!---la etiqueta el main es lo principal de la pagina  -->
+                    <div class="services-content container">
+                        <h2>Añadido recientemente</h2>
+                        <div class="services-group">
+
+                            <div class="services-1">
+                                <img src="images/i1.svg" alt="">
+                                <h3>Archivo plan docente 2023/2</h3>
+                            </div>
+                            <div class="services-1">
+                                <img src="https://www.poli.edu.co/maratonprogramacion" alt="">
+                                <h3>Maratones de programación</h3>
+                            </div>
+                            
+                            <div class="services-1">
+                                <img src="images/i3.svg" alt="">
+                                <h3>Video tutorial Funcionamiento plataforma</h3>
+                            </div>
+                        
+        </div>
+
+    </div>
+    </main>
+   
+    
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="link">
+
+                <h3>lorem</h3>
+                <ul>
+                    <li><a href="">lorem</a></li>
+                    <li><a href="">lorem</a></li>
+                    <li><a href="">lorem</a></li>
+                    <li><a href="">lorem</a></li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="link">
+
+                <h3>lorem</h3>
+                <ul>
+                    <li><a href="">lorem</a></li>
+                    <li><a href="">lorem</a></li>
+                    <li><a href="">lorem</a></li>
+                    <li><a href="">lorem</a></li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="link">
+
+                <h3>Créditos</h3>
+                <ul>
+                    <li><a href="">Juliana caicedo</a></li>
+                    <li><a href="">Carolina Cifuentes</a></li>
+                    <li><a href="">Andrea Martin</a></li>
+                    <li><a href="">Diego Vargas</a></li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="link">
+
+                <h3>Redes Sociales</h3>
+                <ul>
+                    <li><a href="">lorem</a></li>
+                    <li><a href="">lorem</a></li>
+                    <li><a href="">lorem</a></li>
+                    <li><a href="">lorem</a></li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
