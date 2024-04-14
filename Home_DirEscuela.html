@@ -1,34 +1,59 @@
+<!-- insertar el codigo de javascript a en html -->
 <script>
+    
+    /**la funcion toggle es para hacer un despliegue como lo es en este caso el menu
+    al principio se demuestra oculto, pero al desplegarlo apareceran las diferentes opciones
+    **/
     function toggleMenu() {
+        /**Se llama al elemento que se encuentra en el html que en este caso es menuList y esta se guardara
+         * en la nueva variante menuList
+         **/
         var menuList = document.getElementById("menuList");
+        // si el menu se muestra visible, lo que se hara es que se oculte 
         menuList.style.display = menuList.style.display === "block" ? "none" : "block";
     }
+    // la funcion de cargadocente 
     function CargaDocente() {
-        event.preventDefault();        
+        //cancela el un evento sin pausar el funcionamiento de la aplicacion 
+        event.preventDefault();   
+        // al cancelar el event lo que hace es redirige a la pagina de carga docente      
         window.location.href = "CargaDocente.html";
     }
+    //funcion de vista docente
     function VistaDocente() {
-        event.preventDefault();        
+        //cancela el un evento sin pausar el funcionamiento de la aplicacion 
+        event.preventDefault();  
+        // al cancelar el event lo que hace es redirige a la pagina de vistadocente
         window.location.href = "VistaDocente.html";
     }
+    //funcion de ListaDocentes
     function ListaDocentes() {
+         //cancela el un evento sin pausar el funcionamiento de la aplicacion 
         event.preventDefault();        
+        // al cancelar el event lo que hace es redirige a la pagina de ListaDocentes
         window.location.href = "ListaDocentes.html";
     }
+    //funcion de AprobacionPlan
     function AprobacionPlan() {
+         //cancela el un evento sin pausar el funcionamiento de la aplicacion
         event.preventDefault();        
+        // al cancelar el event lo que hace es redirige a la pagina de RetroalimentacionPlanDocente
         window.location.href = "RetroalimentacionPlanDocente.html";
     }
-
+    //funcion de VistaPlan
     function VistaPlan() {
+         //cancela el un evento sin pausar el funcionamiento de la aplicacion
         event.preventDefault();        
+        // al cancelar el event lo que hace es redirige a la pagina de las actividades docente
         window.location.href = "https://docs.google.com/spreadsheets/d/1_pnJ8_-bi2E2MkkaHTXBaMVT-Bg4GJuV3YSqhMhxbhc/edit?usp=sharing" 
     }
 </script>
 
-
+<!--Se relaciona directamente con el navegador-->
 <!DOCTYPE html>
+<!--Lenguaje de la pagina en este caso seria en español-->
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
