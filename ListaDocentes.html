@@ -66,7 +66,7 @@
             <td>
                 <div style="text-align: center;">
                     <!-- Botón para subir documentos -->
-                    <button type="button" class="BT_ BT_-x" onclick="AprobacionPlanes()">Ver</button>
+                    <button type="button" class="BT_ BT_-x" onclick="VerPlan()">Ver plan</button>
                 </div>
             </td>
         </tr>
@@ -81,12 +81,10 @@
         var menuList = document.getElementById("menuList");
         menuList.style.display = menuList.style.display === "block" ? "none" : "block";
     }
-    function AprobacionPlanes() {
-        const confirmacion = window.confirm('Vas a ver el plan del docente seleccionado ¿Estás seguro?');
-        if (confirmacion) {
-            event.preventDefault();        
-            window.location.href = "AprobacionPlanes.html";
-        }
+    function VerPlan() {
+        
+            window.location.href = "PlanAprobado.html";
+        
     }
     function confirmar() {
         const confirmacion = window.confirm('Vas a confirmar el plan docente creado ¿Estás seguro de guardarlo?');
