@@ -20,7 +20,8 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#" onclick="InicioMensaje()">Inicio</a></li>
-                <li class="breadcrumb-item"><a href="#">Aprobar planes docente</a></li>
+                <li class="breadcrumb-item"><a href="./RetroalimentacionPlanDocente.html" >Lista planes docente</a></li>
+                <li class="breadcrumb-item"><a>Aprobar planes docente</a></li>
             </ol>
         </nav>
         <!-- Espacio para contenedores de txt -->
@@ -106,14 +107,33 @@
             </ol>
         </nav>
         <!-- Botón de confirmación para enviar el formulario-->
-        <nav id="botonConfirmacion">
-            <button onclick="confirmar()" type="button" class="BT_ BT_-x" style="position: relative;left:86%;">Aprobar </button>
+        <nav>
+            <button id="botonConfirmacion" onclick="confirmar()" type="button" class="BT_ BT_-x" style="position: relative;left:86%;">Aprobar </button>
+            <button id="Restroalimentacion" onclick="Devolucion()" type="button" class="BT_ BT_-x" style="position: relative;left:58%;background-color: red;">Devolver  </button>
+
         </nav>
+     
+    </div>
+
+
+    <div id="CargaDocente" style="margin-top: 1%;">
+            <p>Comentarios sobre el plan docente actual: </p>
+            <div class="comentarios"><textarea placeholder="Escribe tu comentario aquí"></textarea></div>
+            <button type="button" onclick="InicioMensaje()"class="BT_ BT_-x"  style="width:150px;right: 130px;">Enviar</button>
+    
+     
     </div>
 </body>
 </html>
 
 <script>
+       function Devolucion() {
+        const confirmacion = window.confirm('Vas a devolver este plan docente, ¿Estás seguro?');
+        if (confirmacion) {
+            event.preventDefault();        
+            window.location.href = "Home_DirEscuela.html";
+        }
+    }
     /*Función con ventana emergente para confirmación de acciones*/
     function confirmar() {
         const confirmacion = window.confirm('Vas a aprobar el plan docente creado ¿Estás seguro ?');
