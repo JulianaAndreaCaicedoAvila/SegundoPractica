@@ -13,3 +13,7 @@ Poner qué es cada cosa.
 *<ol> representa una lista ordenada, que se utilizará para mostrar las migas de pan.
 *<li> representa un ítem de la lista. 
 *<div> se utiliza para agrupar varios elementos relacionados
+*<th> en HTML se utiliza para definir una celda de encabezado en una tabla. 
+La etiqueta <th> se utiliza dentro de la etiqueta <tr>
+(fila) para indicar que el contenido de esa celda es un encabezado de tabla.
+*

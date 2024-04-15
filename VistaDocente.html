@@ -101,10 +101,14 @@
         </div>
         <!-- Se crea la tabla con los encabezados -->
         <span style="left: 40%;position: relative;" class="text">Plan docente asignado:</span>
+        <!--contiene los elemntos de la tabla-->
         <div class="tabla-container">
+            <!--lo que contendra la tabla-->
             <table>
                 <thead>
+                    <!--poder ingresar los encabezados de la tabla y agruparlos-->
                     <tr>
+                        <!--encabezados del ingreso de textos-->
                         <th>Código:</th>
                         <th>Función:</th>
                         <th>Acción principal:</th>
@@ -112,33 +116,55 @@
                         <th>Subir:</th>
                     </tr>
                 </thead>
+                <!--contiene los datos de las filas de las tablas-->
                 <tbody id="tabla-body">
                     <tr>
                 <td>
+                    <!--se aliniara el contenido del texto hacia el centro-->
                     <div style="text-align: center;">
-                        <input id="codigoTabla" type="text" class="form-control" placeholder="Código" aria-label="Recipient's username" aria-describedby="basic-addon2" readonly>
+                         <!--se declara el identificador, el espacio donde sera puesto el texto,
+                             a su vez utilizara los estilos proporcionados en el css-->
+                        <input id="codigoTabla" type="text" class="form-control" 
+                        placeholder="Código" aria-label="Recipient's username" 
+                        aria-describedby="basic-addon2" readonly>
                     </div>
                 </td>
 
                 <td>
+                    <!--se aliniara el contenido del texto hacia el centro-->
                     <div style="text-align: center;">
-                        <input id="funcionTabla" type="text" class="form-control" placeholder="Función " aria-label="Recipient's username" aria-describedby="basic-addon2" readonly>
+                         <!--se declara el identificador, el espacio donde sera puesto el texto,
+                             a su vez utilizara los estilos proporcionados en el css-->
+                        <input id="funcionTabla" type="text" class="form-control" 
+                        placeholder="Función " aria-label="Recipient's username" 
+                        aria-describedby="basic-addon2" readonly>
                     </div>
                 </td>
 
                 <td>
+                     <!--se aliniara el contenido del texto hacia el centro-->
                     <div style="text-align: center;">
-                        <input id="AccionTabla" type="text" class="form-control" placeholder="Acción" aria-label="Recipient's username" aria-describedby="basic-addon2" readonly>
+                         <!--se declara el identificador, el espacio donde sera puesto el texto,
+                             a su vez utilizara los estilos proporcionados en el css-->
+                        <input id="AccionTabla" type="text" class="form-control" 
+                        placeholder="Acción" aria-label="Recipient's username" 
+                        aria-describedby="basic-addon2" readonly>
                     </div>
                 </td>
 
                 <td>
+                    <!--se aliniara el contenido del texto hacia el centro-->
                     <div style="text-align: center;">
-                        <input id="EntregableTabla" type="text" class="form-control" placeholder="Entregable" aria-label="Recipient's username" aria-describedby="basic-addon2" readonly>
+                         <!--se declara el identificador, el espacio donde sera puesto el texto,
+                             a su vez utilizara los estilos proporcionados en el css-->
+                        <input id="EntregableTabla" type="text" class="form-control" 
+                        placeholder="Entregable" aria-label="Recipient's username" 
+                        aria-describedby="basic-addon2" readonly>
                     </div>
                 </td>
 
                 <td>
+                    <!--se aliniara el contenido del texto hacia el centro-->
                     <div style="text-align: center;">
                         <!-- Botón para subir documentos -->
                         <button type="button" class="BT_ BT_-x" onclick="subirDocumento()">Subir</button>
@@ -149,6 +175,12 @@
             </table>
         </div>
         <!-- Es para ver el enlace de el plan docente -->
+        <!--se organiara la lista-->
+        <!--se redirecciona al usuario a la lista de codigos-->
+        <!--se redirreciona a la lista de miga de pan-->
+        <!--al darle click a la tabla de codigos de plan docente se redirreciona al documento
+        en donde se encentran los codigos que puede emplear el docente a al hora de subir el 
+        documento-->
         <nav aria-label="breadcrumb">
             <ol class="listadoCodigos">
                 <li class="breadcrumb-item">
