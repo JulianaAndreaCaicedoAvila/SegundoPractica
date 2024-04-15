@@ -197,28 +197,38 @@
 </body>
 </html>
 
+<!-- insertar el codigo de javascript a en html -->
 <script>
     /*Función con ventana emergente para confirmación de acciones*/
     function confirmar() {
+        //aparece pantalla emergente en donde se le avisa al usuario si esta seguro de guardar el docuemnto
         const confirmacion = window.confirm('Vas a confirmar el plan docente creado ¿Estás seguro de guardarlo?');
         if (confirmacion) {
-            event.preventDefault();        
+             //cancela el un evento sin pausar el funcionamiento de la aplicacion 
+            event.preventDefault(); 
+            // al cancelar el event lo que hace es redirige a la pagina de home         
             window.location.href = "Home_DirEscuela.html";
         }
     }
     /*Función con ventana emergente para confirmación de acciones*/
     function InicioMensaje() {
+        //aparecera una pantalla emergente en donde diga si el usurio esta seguro de regresar ala pagina de inicio
         const confirmacion = window.confirm('¿Estás seguro de que quieres volver al inicio de la página?');
         if (confirmacion) {
-            event.preventDefault();        
+        //cancela el un evento sin pausar el funcionamiento de la aplicacion 
+            event.preventDefault();     
+            // al cancelar el event lo que hace es redirige a la pagina de home     
             window.location.href = "Home_DirEscuela.html";
         }
     }
     /*Funcionalidad para subir documento*/
     function subirDocumento() {
+        //aparece una ventana emergente en donde se le pregunta al docente si esta seguro de subir el docuemnto a el repositorio
         const confirmacion = window.confirm('Vas a ir a la opción de subir documentos¿Estás seguro ?');
         if (confirmacion) {
-            event.preventDefault();        
+            //cancela el un evento sin pausar el funcionamiento de la aplicacion 
+            event.preventDefault();   
+            // al cancelar el event lo que hace es redirige a la pagina de home       
             window.location.href = "CargaDocenteArchivoEtiquetas.html";
         }
     }
