@@ -7,3 +7,13 @@ Poner qué es cada cosa.
 -window.location.href: Es para cambiar de vista en HTML.
 
 -onclick: Es para llamar a las funciones de JS
+
+*<span> se utiliza para aplicar estilos o manipular parte del texto dentro de la página.
+*<nav> se utiliza para definir una sección de navegación dentro de la página.
+*<ol> representa una lista ordenada, que se utilizará para mostrar las migas de pan.
+*<li> representa un ítem de la lista. 
+*<div> se utiliza para agrupar varios elementos relacionados
+*<th> en HTML se utiliza para definir una celda de encabezado en una tabla. 
+La etiqueta <th> se utiliza dentro de la etiqueta <tr>
+(fila) para indicar que el contenido de esa celda es un encabezado de tabla.
+*

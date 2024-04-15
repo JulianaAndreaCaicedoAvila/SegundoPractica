@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aprobar Planes</title>
+    <title>Plan aprobado</title>
     <link rel="stylesheet" href="Estilos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 </head>
@@ -16,12 +16,12 @@
     <!-- Contenedor acciones -->
     <div id="CargaDocente">
         <!-- Menú tipo miga de pan-->
-        <span class="text">Plan pendientes por aprobar:</span>
+        <span class="text">Plan aprobado:</span>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#" onclick="InicioMensaje()">Inicio</a></li>
-                <li class="breadcrumb-item"><a href="./RetroalimentacionPlanDocente.html" >Lista de planes docente pendientes</a></li>
-                <li class="breadcrumb-item"><a>Aprobar planes docente</a></li>
+                <li class="breadcrumb-item"><a href="./ListaDocentes.html" >Lista planes docente</a></li>
+                <li class="breadcrumb-item"><a>Plan aprobado</a></li>
             </ol>
         </nav>
         <!-- Espacio para contenedores de txt -->
@@ -64,6 +64,7 @@
                         <th>Función:</th>
                         <th>Acción principal:</th>
                         <th>Entregable:</th>
+                        <th>Enlace SharePoint:</th>
                     </tr>
                 </thead>
                 <tbody id="tabla-body">
@@ -91,7 +92,11 @@
                         <input id="EntregableTabla" type="text" class="form-control" placeholder="Entregable" aria-label="Recipient's username" aria-describedby="basic-addon2" readonly>
                     </div>
                 </td>
-
+                <td>
+                    <div style="text-align: center;">
+                        <input id="Enlace" type="text" class="form-control" placeholder="Enlace" aria-label="Recipient's username" aria-describedby="basic-addon2" readonly>
+                    </div>
+                </td>
               
             </tr>
                 </tbody>
@@ -105,43 +110,23 @@
                     <a href="https://docs.google.com/spreadsheets/d/1_pnJ8_-bi2E2MkkaHTXBaMVT-Bg4GJuV3YSqhMhxbhc/edit?usp=sharing" target="_blank" rel="noopener">Ver listado de código</a>
                 </li>
             </ol>
+            <div style="text-align: center;">
+                <!-- Botón para subir documentos -->
+                <button type="button" class="BT_ BT_-x" onclick="InicioMensaje()">Salir</button>
+            </div>
         </nav>
-        <!-- Botón de confirmación para enviar el formulario-->
-        <nav>
-            <button id="botonConfirmacion" onclick="confirmar()" type="button" class="BT_ BT_-x" style="position: relative;left:86%;">Aprobar </button>
-            <button id="Restroalimentacion" onclick="Devolucion()" type="button" class="BT_ BT_-x" style="position: relative;left:58%;background-color: red;">Devolver  </button>
-
-        </nav>
+       
      
     </div>
 
 
-    <div id="CargaDocente" style="margin-top: 1%;">
-            <p>Comentarios sobre el plan docente actual: </p>
-            <div class="comentarios"><textarea placeholder="Escribe tu comentario aquí"></textarea></div>
-            <button type="button" onclick="InicioMensaje()"class="BT_ BT_-x"  style="width:150px;right: 130px;">Enviar</button>
-    
-     
-    </div>
+   
 </body>
 </html>
 
 <script>
-       function Devolucion() {
-        const confirmacion = window.confirm('Vas a devolver este plan docente, ¿Estás seguro?');
-        if (confirmacion) {
-            event.preventDefault();        
-            window.location.href = "Home_DirEscuela.html";
-        }
-    }
-    /*Función con ventana emergente para confirmación de acciones*/
-    function confirmar() {
-        const confirmacion = window.confirm('Vas a aprobar el plan docente creado ¿Estás seguro ?');
-        if (confirmacion) {
-            event.preventDefault();        
-            window.location.href = "Home_DirEscuela.html";
-        }
-    }
+   
+  
     /*Función con ventana emergente para confirmación de acciones*/
     function InicioMensaje() {
         const confirmacion = window.confirm('¿Estás seguro de que quieres volver al inicio de la página?');
@@ -150,12 +135,5 @@
             window.location.href = "Home_DirEscuela.html";
         }
     }
-    /*Funcionalidad para subir documento*/
-    function subirDocumento() {
-        const confirmacion = window.confirm('Vas a ir a la opción de subir documentos¿Estás seguro ?');
-        if (confirmacion) {
-            event.preventDefault();        
-            window.location.href = "CargaDocenteArchivoEtiquetas.html";
-        }
-    }
+
 </script>
