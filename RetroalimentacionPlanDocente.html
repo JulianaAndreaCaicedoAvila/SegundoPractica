@@ -1,11 +1,19 @@
+<!--Se relaciona directamente con el navegador-->
 <!DOCTYPE html>
+<!--Lenguaje de la pagina es español-->
 <html lang="en">
 <head>
+    <!--Incluye varias etiquetas-->
     <meta charset="UTF-8">
+    <!--Se utiliza para iintroducir a internet edge-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Mide las dimenciones en las que se debe presentar en cada dispositivo la escala inicial es de 1.0-->    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Es el titulo de la pagina -->
     <title>Retroalimentación plan</title>
+    <!--nos ayuda con los estilos css pñara facilitar-->
     <link rel="stylesheet" href="Estilos.css">
+    <!--por medio de Bootstrap nos ayuda a tener mas estilos y elementos para usar-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 </head>
 <body>
@@ -15,26 +23,32 @@
     </div>
     <!-- Contenedor acciones -->
     <div id="CargaDocente">
-        <!-- Buscador con menus -->
+        <!-- Buscador con menus  -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!-- Bootstrap -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+                <!-- icono de menu -->
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
+                  <!--Inicio de mensaje para volver al home -->
                   <a class="nav-link" onclick="InicioMensaje()">Home <span class="sr-only">(current)</span></a>
                 </li>
-             
+                <!--Crea elemento de la lista -->
                 <li class="nav-item">
+                    <!--menu escuelas -->
                     <a class="nav-link" onclick="toggleMenu('menuList')">Escuelas</a>
                     <ul class="menu-list" id="menuList" style="background-color: rgb(255, 255, 255);">
+                        <!--elementos de la lista escuela -->
                         <li><a onclick="">FNGS</a></li>
                         <li><a onclick="">FSCC</a></li>
                         <li><a onclick="">FIDI</a></li>
                       </ul>
                 </li>
               </ul>
+              <!--barra de busqueda --> 
               <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
@@ -43,21 +57,30 @@
           </nav>
     </div>
 
-
+    <!--contenedor con una margen superior -->
     <div id="CargaDocente"style="margin-top: 1%;">
+        <!--contenedor para mostrar la tabla de los documentos-->
         <div class="tabla-container">
+            <!--se crea la tabla para poder organizar en filas y columnas-->
             <table>
+                <!--encabezados-->
                 <thead>
+                    <!--filas-->
                     <tr>
+                        <!--encabezado de las columnas-->
                         <th>Nombre</th>
                         <th>Código:</th>
                         <th>Cargo</th>
                     </tr>
                 </thead>
+                <!--cuerpo de la tabla-->
                 <tbody id="tabla-body">
                     <tr>
+                <!--celdas -->        
                 <td>
+                    <!--alineacion de texto en las celas --> 
                     <div style="text-align: center;">
+                        <!--tabla de datos --> 
                         <input id="nombre" type="text" class="form-control" placeholder="nombre" aria-label="Recipient's username" aria-describedby="basic-addon2" readonly>
                     </div>
                 </td>
@@ -85,28 +108,43 @@
 </body>
 </html>
 
-
+<!-- insertar el codigo de javascript a en html -->
 <script>
+    //la funcion toggle es para hacer un despliegue como lo es en este caso el menu al principio se demuestra oculto, pero al desplegarlo apareceran las diferentes opciones
     function toggleMenu() {
+        //Se llama al elemento que se encuentra en el html que en este caso es menuList y esta se guardara en la nueva variante menuList
         var menuList = document.getElementById("menuList");
+        // si el menu se muestra visible, lo que se hara es que se oculte 
         menuList.style.display = menuList.style.display === "block" ? "none" : "block";
     }
+    //funcion de confirmar
     function confirmar() {
+        //nos muestra una  ventana emergente prreguntando si queremos guardar y otra con los botones, confirmar o cancelar
         const confirmacion = window.confirm('Vas a confirmar el plan docente creado ¿Estás seguro de guardarlo?');
+        //verifica si se guardo o no
         if (confirmacion) {
-            event.preventDefault();        
+            //cancela el un evento sin pausar el funcionamiento de la aplicacion
+            event.preventDefault();    
+            //  se redirige a la pagina de AprobacionPlanes
             window.location.href = "Home_DirEscuela.html";
         }
     }
+    //funcion de InicioMensaje
     function InicioMensaje() {
+        //nos muestra una  ventana emergente prreguntando si queremos volver a la pagina de inicio y otra con los botones, confirmar o cancelar
         const confirmacion = window.confirm('¿Estás seguro de que quieres volver al inicio de la página?');
         if (confirmacion) {
-            event.preventDefault();        
+            //cancela el un evento sin pausar el funcionamiento de la aplicacion
+            event.preventDefault();  
+            //  se redirige a la pagina de AprobacionPlanes
             window.location.href = "Home_DirEscuela.html";
         }
     }
+    //funcion de AprobacionPlanes
     function AprobacionPlanes() {
+            //cancela el un evento sin pausar el funcionamiento de la aplicacion
             event.preventDefault();        
+            //  se redirige a la pagina de AprobacionPlanes
             window.location.href = "AprobacionPlanes.html";
         }
     
