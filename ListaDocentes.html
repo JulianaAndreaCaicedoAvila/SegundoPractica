@@ -27,7 +27,7 @@
                 </li>
              
                 <li class="nav-item">
-                    <a class="nav-link" onclick="toggleMenu('menuList')">Escuelas</a>
+                    <a class="nav-link" onclick="toggleMenu('menuList')">Facultades</a>
                     <ul class="menu-list" id="menuList" style="background-color: rgb(255, 255, 255);">
                         <li><a onclick="">FNGS</a></li>
                         <li><a onclick="">FSCC</a></li>
@@ -43,13 +43,48 @@
           </nav>
     </div>
     <div id="CargaDocente"style="margin-top: 1%;">
+        <div class="tabla-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Código:</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-body">
+                    <tr>
+                <td>
+                    <div style="text-align: center;">
+                        <input id="nombre" type="text" class="form-control" placeholder="Nombre" aria-label="Recipient's username" aria-describedby="basic-addon2" readonly>
+                    </div>
+                </td>
+                <td>
+                    <div style="text-align: center;">
+                        <input id="codigo" type="number" class="form-control" placeholder="código " aria-label="Recipient's username" aria-describedby="basic-addon2" readonly>
+                    </div>
+                </td>  
+            <td>
+                <div style="text-align: center;">
+                    <!-- Botón para subir documentos -->
+                    <button type="button" class="BT_ BT_-x" onclick="VerPlan()">Ver plan</button>
+                </div>
+            </td>
+        </tr>
+            </tbody>
+        </table>
     </div>
+
 </body>
 </html>
 <script>
     function toggleMenu() {
         var menuList = document.getElementById("menuList");
         menuList.style.display = menuList.style.display === "block" ? "none" : "block";
+    }
+    function VerPlan() {
+        
+            window.location.href = "PlanAprobado.html";
+        
     }
     function confirmar() {
         const confirmacion = window.confirm('Vas a confirmar el plan docente creado ¿Estás seguro de guardarlo?');

@@ -52,6 +52,7 @@
                         <th>Nombre</th>
                         <th>Código:</th>
                         <th>Cargo</th>
+                        <th>Estado</th>
                     </tr>
                 </thead>
                 <tbody id="tabla-body">
@@ -74,8 +75,14 @@
 
             <td>
                 <div style="text-align: center;">
+                    <input id="estado" type="text" style="background-color:darkgray;"class="form-control" placeholder="Estado" aria-label="Recipient's username" aria-describedby="basic-addon2" readonly>
+                </div>
+            </td>
+
+            <td>
+                <div style="text-align: center;">
                     <!-- Botón para subir documentos -->
-                    <button type="button" class="BT_ BT_-x" onclick="AprobacionPlanes()">Ver</button>
+                    <button type="button" class="BT_ BT_-x"  onclick="AprobacionPlanes()">Ver</button>
                 </div>
             </td>
         </tr>
